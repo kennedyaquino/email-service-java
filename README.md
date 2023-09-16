@@ -23,13 +23,21 @@ git clone https://github.com/kennedyaquino/email-service-java.git
 ```
 
 2. Configure as variaveis de ambiente adicionado os dados SES da AWS para leitura no arquivo application.properties, ou se desejar implementar a conexão a outros servidores de email.
+```
+aws;
+accessKeyId:CHAVE DE ACESSO
+secretKey:CHAVE SECRETA DE ACESSO
+region: REGIAO DA AWS
+emailsource: E-MAIL CADASTRADO PARA ENVIOS
+```
+
 
 3. Na pasta raiz do projeto execute a aplicação pela linha de comando:
 ```
 mvn spring-boot:run
 ```
 
-4. Acesse endpoint ``` http://localhost:8080/api/email ``` com uma ferramenta API Client de sua escolha,  passando o seguinte json no body:
+4. Acesse endpoint ``` http://localhost:8080/api/email``` com uma ferramenta API Client de sua escolha,  passando o seguinte json no body:
 ```json
 {
   "to": "email de destino",
