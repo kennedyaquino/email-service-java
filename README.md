@@ -22,7 +22,7 @@ Este projeto surgiu como parte de um estudo sobre aplicações baseadas em micro
 git clone https://github.com/kennedyaquino/email-service-java.git
 ```
 
-2. Configure as variaveis de ambiente adicionado os dados SES da AWS para leitura no arquivo application.properties, ou se desejar implementar a conexão a outros servidores de email.
+2. Configure as variaveis de ambiente adicionando os dados SES da AWS para leitura no arquivo application.properties, ou se desejar implementar a conexão a outros servidores de email.
 ```
 aws;
 accessKeyId:CHAVE DE ACESSO
