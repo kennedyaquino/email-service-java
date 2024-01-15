@@ -3,6 +3,7 @@ package com.kennedy.emailservice.controllers;
 import com.kennedy.emailservice.application.EmailSenderService;
 import com.kennedy.emailservice.core.EmailRequest;
 import com.kennedy.emailservice.core.exceptions.EmailServiceException;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,7 @@ public class EmailSenderController {
         this.emailSenderService = emailSenderService;
     }
 
+    @ApiOperation(value = "Enviar um email")
     @PostMapping
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequest request) {
         try {
