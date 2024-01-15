@@ -24,10 +24,9 @@ git clone https://github.com/kennedyaquino/email-service-java.git
 
 2. Configure as variaveis de ambiente adicionando os dados SES da AWS para leitura no arquivo application.properties, ou se desejar implementar a conexão a outros servidores de email.
 ```
-aws;
-accessKeyId:CHAVE DE ACESSO
-secretKey:CHAVE SECRETA DE ACESSO
-region: REGIAO DA AWS
+aws.accessKeyId:CHAVE DE ACESSO
+aws.secretKey:CHAVE SECRETA DE ACESSO
+aws.region: REGIAO DA AWS
 emailsource: E-MAIL CADASTRADO PARA ENVIOS
 ```
 
@@ -45,6 +44,8 @@ mvn spring-boot:run
   "body": "corpo da mensagem"
 }
 ```
+
+5. Esta aplicação está documentada pelo Swagger e pode ser acessada pelo endpoint ``` http://localhost:8080/swagger-ui/``` e os endpoints da aplicação podem ser testado pela interface da documentação.
 
 ### 📝 Licença
 
